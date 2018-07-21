@@ -1,6 +1,6 @@
 {
   "name": "7thsensedelta",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Module to control 7th Sense Delta Media Server",
   "main": "index.js",
   "scripts": {
