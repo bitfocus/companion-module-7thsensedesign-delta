@@ -100,6 +100,7 @@ instance.prototype.actions = function(system) {
 	var self = this;
 
 	self.system.emit('instance_actions', self.id, {
+		'showmode': { label: 'set system in Show mode'},
 		'play':    {
 			label: 'Play the show (no Cueing) [Timeline]',
 			options: [
@@ -148,46 +149,46 @@ instance.prototype.actions = function(system) {
 		'advance': {
 			label: 'Step forward n frames (defaults to 1)',
 			options: [
- 				{
- 					type: 'textinput',
- 				 	label: 'Number of frames',
- 					id: 'frames',
- 					default: '1'
- 				},
+				 {
+					 type: 'textinput',
+						label: 'Number of frames',
+					 id: 'frames',
+					 default: '1'
+				 },
 				{
 					type: 'textinput',
 					label:'Time Line number',
 					id:   'tl',
 					regex: self.REGEX_NUMBER
 				}
- 			]
+			 ]
 		},
 		'stepback': {
 			label: 'Step back n frames (defaults to 1)',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'Number of frames',
- 					id: 'frames',
- 					default: '1'
- 				},
+				 {
+					 type: 'textinput',
+					 label: 'Number of frames',
+					 id: 'frames',
+					 default: '1'
+				 },
 				{
 					type: 'textinput',
 					label:'Time Line number',
 					id:   'tl',
 					regex: self.REGEX_NUMBER
 				}
- 			]
+			 ]
 		},
 		'gotomarker': {
 			label: 'Move to a named marker on timeline (optionally play)',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'Marker name',
- 					id: 'marker',
- 					default: ''
- 				},
+				 {
+					 type: 'textinput',
+					 label: 'Marker name',
+					 id: 'marker',
+					 default: ''
+				 },
 				{
 					type: 'dropdown',
 					label: 'Goto and play',
@@ -200,17 +201,17 @@ instance.prototype.actions = function(system) {
 					id:   'tl',
 					regex: self.REGEX_NUMBER
 				}
- 			]
+			 ]
 		},
 		'gotoframe': {
 			label: 'Move to the framenumber specified (optionally play)',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'Frame Number',
- 					id: 'frame',
- 					default: ''
- 				},
+				 {
+					 type: 'textinput',
+					 label: 'Frame Number',
+					 id: 'frame',
+					 default: ''
+				 },
 				{
 					type: 'dropdown',
 					label: 'Goto and play',
@@ -223,139 +224,139 @@ instance.prototype.actions = function(system) {
 					id:   'tl',
 					regex: self.REGEX_NUMBER
 				}
- 			]
+			 ]
 		},
 		'sequence': {
 			label: 'Start the named sequence',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'Sequence name',
- 					id: 'seq',
- 					default: ''
- 				}
- 			]
+				 {
+					 type: 'textinput',
+					 label: 'Sequence name',
+					 id: 'seq',
+					 default: ''
+				 }
+			 ]
 		},
 		'sequenceAll': {
 			label: 'Start the named sequence on all servers in the group.',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'Sequence name',
- 					id: 'seq',
- 					default: ''
- 				}
- 			]
+				 {
+					 type: 'textinput',
+					 label: 'Sequence name',
+					 id: 'seq',
+					 default: ''
+				 }
+			 ]
 		},
 		'smpte': {
 			label: 'Enable or disable tracking an external SMPTE timecode',
 			options: [
- 				{
- 					type: 'dropdown',
- 					label: 'SMPTE On/OFF',
- 					id: 'smpteId',
- 					choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
- 				}
- 			]
+				 {
+					 type: 'dropdown',
+					 label: 'SMPTE On/OFF',
+					 id: 'smpteId',
+					 choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
+				 }
+			 ]
 		},
 		'rate': {
 			label: 'Set the framerate to n frames per second',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'frames pr second',
- 					id: 'fps',
- 					default: ''
- 				}
- 			]
+				 {
+					 type: 'textinput',
+					 label: 'frames pr second',
+					 id: 'fps',
+					 default: ''
+				 }
+			 ]
 		},
 		'load': {
 			label: 'Load a different show file',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'Filename',
- 					id: 'loadFile',
- 					default: ''
- 				}
- 			]
+				 {
+					 type: 'textinput',
+					 label: 'Filename',
+					 id: 'loadFile',
+					 default: ''
+				 }
+			 ]
 		},
 		'loadAll': {
 			label: 'Load a different show file on all servers in a group',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'Filename',
- 					id: 'loadFile',
- 					default: ''
- 				}
- 			]
+				 {
+					 type: 'textinput',
+					 label: 'Filename',
+					 id: 'loadFile',
+					 default: ''
+				 }
+			 ]
 		},
 		'save': {
 			label: 'Save a different show file',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'Filename',
- 					id: 'saveFile',
- 					default: ''
- 				}
- 			]
+				 {
+					 type: 'textinput',
+					 label: 'Filename',
+					 id: 'saveFile',
+					 default: ''
+				 }
+			 ]
 		},
 		'saveAll': {
 			label: 'Save a different show file on all servers in a group',
 			options: [
- 				{
- 					type: 'textinput',
- 					label: 'Filename',
- 					id: 'saveFile',
- 					default: ''
- 				}
- 			]
+				 {
+					 type: 'textinput',
+					 label: 'Filename',
+					 id: 'saveFile',
+					 default: ''
+				 }
+			 ]
 		},
 		'graph': {
 			label: 'Enable/disable diagnostic graphs',
 			options: [
- 				{
- 					type: 'dropdown',
- 					label: 'Graph On/OFF',
- 					id: 'alt',
- 					choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
- 				}
- 			]
+				 {
+					 type: 'dropdown',
+					 label: 'Graph On/OFF',
+					 id: 'alt',
+					 choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
+				 }
+			 ]
 		},
 		'stats': {
 			label: 'enable/disable diagnostic stats',
 			options: [
- 				{
- 					type: 'dropdown',
- 					label: 'Stats On/OFF',
- 					id: 'alt',
- 					choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
- 				}
- 			]
+				 {
+					 type: 'dropdown',
+					 label: 'Stats On/OFF',
+					 id: 'alt',
+					 choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
+				 }
+			 ]
 		},
 		'audioVu': {
 			label: 'enable/disable Audio VU',
 			options: [
- 				{
- 					type: 'dropdown',
- 					label: 'Audio VU On/OFF',
- 					id: 'alt',
- 					choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
- 				}
- 			]
+				 {
+					 type: 'dropdown',
+					 label: 'Audio VU On/OFF',
+					 id: 'alt',
+					 choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
+				 }
+			 ]
 		},
 		'channelid': {
 			label: 'enable/disable channel ID',
 			options: [
- 				{
- 					type: 'dropdown',
- 					label: 'channel ID On/OFF',
- 					id: 'alt',
- 					choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
- 				}
- 			]
+				 {
+					 type: 'dropdown',
+					 label: 'channel ID On/OFF',
+					 id: 'alt',
+					 choices: [ { id: 'off', label: 'Off' }, { id: 'on', label: 'On' } ]
+				 }
+			 ]
 		},
 	});
 };
@@ -449,6 +450,10 @@ instance.prototype.action = function(action) {
 
 		case 'channelid':
 			cmd = 'channelid '+ opt.alt;
+			break;
+
+		case 'showmode':
+			cmd = 'applyshowmode';
 			break;
 
 
