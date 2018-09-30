@@ -479,11 +479,5 @@ instance.prototype.action = function(action) {
 
 };
 
-instance.module_info = {
-	label: '7th Sense Delta',
-	id: '7thsensedelta',
-	version: '0.0.2'
-};
-
 instance_skel.extendedBy(instance);
 exports = module.exports = instance;
