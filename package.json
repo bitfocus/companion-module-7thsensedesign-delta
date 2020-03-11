@@ -1,8 +1,15 @@
 {
-	"name": "7thsensedelta",
+	"name": "7thsensedesign-delta",
+	"legacy": [
+		"7thsensedelta"
+	],
 	"version": "1.0.1",
 	"api_version": "1.0.0",
-	"support": { "action": true, "feedback": false, "preset": false },
+	"support": {
+		"action": true,
+		"feedback": false,
+		"preset": false
+	},
 	"shortname": "delta",
 	"keywords": [
 		"Media Server"
