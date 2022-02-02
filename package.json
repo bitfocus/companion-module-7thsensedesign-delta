@@ -14,7 +14,7 @@
 	"keywords": [
 		"Media Server"
 	],
-	"homepage": "https://7thsensedesign.com/delta-media-servers/",
+	"homepage": "https://github.com/bitfocus/companion-module-7thsensedesign-delta#readme",
 	"manufacturer": "7thSense Design",
 	"product": "Delta Media Server",
 	"description": "Module to control 7th Sense Delta Media Server",
@@ -23,5 +23,12 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Per Røine <per.roine@gmail.com>",
-	"license": "MIT"
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/bitfocus/companion-module-7thsensedesign-delta/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bitfocus/companion-module-7thsensedesign-delta.git"
+	}
 }
