@@ -99,7 +99,7 @@ instance.prototype.destroy = function() {
 instance.prototype.actions = function(system) {
 	var self = this;
 
-	self.system.emit('instance_actions', self.id, {
+	self.setActions({
 		'showmode': { label: 'set system in Show mode'},
 		'play':    {
 			label: 'Play the show (no Cueing) [Timeline]',
